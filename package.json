@@ -1,0 +1,22 @@
+{
+  "name": "bratmaker",
+  "version": "1.0.0",
+  "description": "REST API wrapper for generating BRAT album cover style images and videos",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": ["brat", "image-generator", "rest-api"],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=18.x"
+  },
+  "dependencies": {
+    "axios": "^1.18.0",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "multer": "^2.0.1"
+  }
+}
