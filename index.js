@@ -42,7 +42,7 @@ app.get('/api/brat', async (req, res) => {
       return res.status(400).json({ error: 'Parameter "text" is required' });
     }
 
-    const apiUrl = `https://api-nanzz.my.id/docs/api/maker/brat/brat.php?text=${encodeURIComponent(text)}`;
+    const apiUrl = `https://anabot.my.id/api/maker/brat?text=${encodeURIComponent(text)}&apikey=freeApikey`;
     const response = await axios.get(apiUrl, {
       responseType: 'arraybuffer'
     });
@@ -63,7 +63,7 @@ app.get('/api/bratvid', async (req, res) => {
       return res.status(400).json({ error: 'Parameter "text" is required' });
     }
 
-    const apiUrl = `https://api-nanzz.my.id/docs/api/maker/brat/bratvid.php?text=${encodeURIComponent(text)}`;
+    const apiUrl = `https://anabot.my.id/api/maker/bratGif?text=${encodeURIComponent(text)}&apikey=freeApikey`;
     const response = await axios.get(apiUrl, {
       responseType: 'arraybuffer'
     });

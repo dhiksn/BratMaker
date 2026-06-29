@@ -405,6 +405,10 @@ body {
     50% { opacity: 1; }
 }
 
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
 .result-body.loading .placeholder-text {
     animation: pulse 1.4s ease-in-out infinite;
 }
@@ -432,6 +436,20 @@ body {
         display: none;
     }
 
+    /* Bottom nav for mobile */
+    .mobile-nav {
+        display: flex;
+    }
+
+    .app-container {
+        flex-direction: column;
+    }
+
+    .main-wrapper {
+        flex: 1;
+        overflow: hidden;
+    }
+
     .content-area {
         grid-template-columns: 1fr;
     }
@@ -442,5 +460,35 @@ body {
 
     .result-body {
         padding: 20px;
+    }
+}
+
+/* ─── Mobile bottom nav ─────────────────────────────── */
+
+.mobile-nav {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--bg-elevated);
+    border-top: 1px solid var(--border);
+    padding: 8px 16px;
+    padding-bottom: calc(8px + env(safe-area-inset-bottom));
+    gap: 8px;
+    z-index: 100;
+}
+
+.mobile-nav .nav-item {
+    flex: 1;
+    justify-content: center;
+    padding: 10px 8px;
+    font-size: 13px;
+}
+
+/* Add padding so content isn't hidden behind mobile nav */
+@media (max-width: 640px) {
+    .main-wrapper {
+        padding-bottom: 64px;
     }
 }
